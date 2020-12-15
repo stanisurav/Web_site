@@ -1,0 +1,47 @@
+* {font-family: 'Andika New Basic', sans-serif;
+	font-size: 16px;}
+
+
+
+#h1{
+  	font-size: 28px;
+}
+
+#h2{
+  	font-size: 28px;
+    margin-left: 40%;
+}
+
+
+
+#lenk{
+  float:left;
+  margin-right: 30px;
+  width:150px;
+}
+
+#tab{
+margin-left: 27%;
+}
+
+
+
+table {
+	border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+	border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+	margin-left: 22%;
+}
+
+th {border: 1px solid grey;
+    background-color:#cccccc;
+}
+
+form {border: 1px solid #AAAAAA;padding: 0.5em;width:30%;background-color:#f2f2f2; border-radius:10px;}
+
+form input,p{
+	margin-left:23%;
+}
+
+form button{
+	margin-left:23%;
+}

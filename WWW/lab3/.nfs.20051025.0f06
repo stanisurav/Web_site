@@ -1,0 +1,21 @@
+<?php 
+$text = $_POST["userTEXT"];
+$len_text = strlen($text);
+$sign = $_POST["char"];
+$count_char = 0; //подсчет количества символов в тексте
+$mass_of_char = str_split($text);
+
+	echo substr($text,0,1);
+	echo "<br/>";
+echo "Порядкое номера символа " . $sign . " в тексте";
+for ($i=0; $i < $len_text; $i++) {
+	if ($mass_of_char[$i] == $sign) {
+		$count_char = $count_char + 1;
+		echo $i . " ";
+	}
+}
+echo "<br/>";
+echo "Количество символа " . $sign . " - "  . $count_char;
+
+
+ ?>
