@@ -28,17 +28,17 @@
 
     // Запрос на выборку сведений о пользователях
     $result = $mysqli->query("SELECT
-        games.name as game_name,
-        games.genre as game_genre,
+        games.game as game_name,
+        games.theme as game_genre,
         games.developer as game_developer,
         games.publisher as game_publisher,
-        game_keys.key_code,
-        game_keys.purchase_date,
-        game_keys.expiry_date,
-        stores.url as store_url
+        game_keys.cod,
+        game_keys.date_acq,
+        game_keys.date_end,
+        stores.address as store_url
         FROM game_keys
-        LEFT JOIN games ON game_keys.game_id=games.id
-        LEFT JOIN stores ON game_keys.store_id=stores.id"
+        LEFT JOIN games ON game_keys.name_game=games.id
+        LEFT JOIN stores ON game_keys.name_store=stores.id"
     );
 
     if ($result){
