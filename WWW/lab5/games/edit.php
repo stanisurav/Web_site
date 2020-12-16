@@ -2,7 +2,6 @@
   require '../db.php';
   $data=$_POST
  ?>
-
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
@@ -10,9 +9,7 @@
     <title>Изменение данных. Короленко</title>
   </head>
   <body>
-
 <?php
-
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $mysqli = mysqli_connect("localhost","f0479829_stas","stas","f0479829_stas");
     mysqli_set_charset($mysqli, "utf8mb4");

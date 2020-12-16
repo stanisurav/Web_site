@@ -3,14 +3,12 @@ require "../db.php";
 $data=$_POST;
 $games='games';
 ?>
-
 <html>
     <head> <title> Сведения. Короленко </title>
       <link rel="stylesheet" href="/main.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
     </head>
-
     <h2 id="h2">Список игр:</h2>
     <div class="container">
     <table border="1">
@@ -36,7 +34,6 @@ $games='games';
                     $publisher = $row['publisher'];
                     $volume = $row['volume'];
                     $id=$row['id'];
-
                     echo "<tr>";
                     echo "<td>$game</td><td>$theme</td><td>$developer</td><td>$publisher</td><td>$volume</td>";
                     echo "<td><a href='edit.php?id=$id'>Редактировать</a></td>";

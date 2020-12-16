@@ -10,7 +10,6 @@
                 if ($mysqli->connect_errno) {
                     echo "Не удалось подключиться к БД";
                 }
-
                 // Получение данных об играх
                 $result = $mysqli->query("SELECT id, game FROM games");
                 echo "<br>Игра: <select name='game_id'>";
@@ -24,11 +23,9 @@
                     }
                 }
                 echo "</select>";
-
                 // Получение данных о магазинах
                 $result = $mysqli->query("SELECT id, name FROM stores");
                 echo "<br>Магазин: <select name='store_id'>";
-
                 if ($result){
                     while ($row = $result->fetch_array()){
                         $id = $row['id'];

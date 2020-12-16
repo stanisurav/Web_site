@@ -1,31 +1,21 @@
 <?php
 require "../db.php";
-
 $data=$_POST;
-
 if (isset($data['do_add'])) {
   //Проверка
   $errors=array();
   if(trim($data['name'])==''){
-    $errors[]='Введите название игры';
-  }
+    $errors[]='Введите название игры';}
   if(trim($data['theme'])==''){
-    $errors[]='Введите жанр';
-  }
+    $errors[]='Введите жанр';}
   if($data['developer']==''){
-    $errors[]='Введите имя разработчика';
-  }
+    $errors[]='Введите имя разработчика';}
   if($data['publisher']==''){
-    $errors[]='Введите название компании!';
-  }
+    $errors[]='Введите название компании!';}
   if($data['volume']==''){
-    $errors[]='Введите объём продаж!';
-  }
-
+    $errors[]='Введите объём продаж!';}
   if(R::count('games', 'name=?', array($data['name']))>0){
-    $errors[]='Такая игра уже добавлена!';
-  }
-
+    $errors[]='Такая игра уже добавлена!';}
   if(empty($errors)){
     $game= R::dispense('games');
     $game->game=$data['name'];
